@@ -1,0 +1,60 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000; /* Background to black */
+    color: #fff; /* Text to white */
+    font-family: Arial, sans-serif;
+}
+
+.calculator {
+    width: 300px;
+    border: 1px solid #fff; /* Border color to white */
+}
+
+.display {
+    background-color: #222; /* Darker shade for display */
+    color: #fff; /* White text for numbers */
+    font-size: 2em;
+    padding: 10px;
+    text-align: right;
+    border-bottom: 1px solid #fff; /* Border color to white */
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1px;
+}
+
+.buttons button, .history-controls button {
+    background-color: #333; /* Darker buttons */
+    color: #fff; /* White text */
+    padding: 20px 0;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.buttons button:active, .history-controls button:active {
+    background-color: #555; /* Even darker when active */
+}
+
+.zero { /* Adjust for the zero button specifically if needed */
+    grid-column: span 2;
+}
+
+.history {
+    background-color: #222; /* Darker shade for history */
+    color: #fff; /* White text for history */
+    padding: 10px;
+    max-height: 100px;
+    overflow-y: auto;
+}
+
+.history-controls {
+    text-align: right;
+    padding: 10px;
+    background-color: #333; /* Consistent with button styles */
+}
